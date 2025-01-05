@@ -39,12 +39,13 @@ android {
     buildFeatures {
         compose = true
     }
+    ndkVersion = "28.0.12674087"
 }
 
 cargo {
-    module = "../kt-file-coder"
+    module = "kt-file-coder"
     libname = "kt_file_coder" // Or whatever matches Cargo.toml's [package] name.
-    targets = listOf<String>("arm64", "x86")
+    targets = listOf("arm64", "x86")
     prebuiltToolchains = true
     verbose = true
 }
